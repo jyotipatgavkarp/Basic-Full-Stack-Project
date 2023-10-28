@@ -1,0 +1,35 @@
+<div class="datafill">
+
+<button (click)="load()" style="align: center;">Load</button>
+<br> <br>
+<table border="1">
+  <tr>
+    <td>Id</td>
+    <td>Name</td>
+    <td>Mobile</td>
+    <td>Email</td>
+    <td>Table Number</td>
+
+  </tr>
+
+  <tr *ngFor="let obj of names">
+    <td>{{obj.id}}</td>
+    <td>{{obj.name}}</td>
+    <td>{{obj.mobile}}</td>
+    <td>{{obj.email}}</td>
+    <td>{{obj.tableno}}</td>
+
+    <td>
+      <button (click)="delete(obj)">Delete</button>
+    </td>
+  </tr>
+</table>
+<br>
+Id : <br> <input type="number" [(ngModel)]="obj.id"><br>
+Name :<br> <input type="text" [(ngModel)]="obj.name"><br>
+Mobile :<br> <input type="number" [(ngModel)]="obj.mobile"><br>
+Email: <br>  <input type="text" [(ngModel)]="obj.email"><br>
+Table Number :<br> <input type="number" [(ngModel)]="obj.tableno"><br><br>
+<button (click)="add()">Add</button>
+
+</div>

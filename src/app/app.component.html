@@ -1,0 +1,27 @@
+<h2 class="heading">Restaurant Table Booking Web-App</h2>
+
+<div *ngIf="login==0" class ="loginPage">
+<br><br>
+Username: <input type="text" [(ngModel)]="username"><br><br>
+Password: <input type="password"[(ngModel)]="password"> <br><br>
+<button (click)="loginMethod()">Login</button><br> <br>
+<button (click)="showRegister()"  >Registration</button>
+
+</div>
+<div *ngIf="login==1" >
+    <a routerLink="/app-dashboard"> </a>
+</div>
+
+<div *ngIf="ShowRegistrationForm==1" class =loginPage>
+    username : <input type="text" [(ngModel)]="rusername"><br><br>
+    password : <input type="password" [(ngModel)]="rpassword"><br><br>
+    name : <input type="text" [(ngModel)]="rname"><br><br>
+    mobile : <input type="number" [(ngModel)]="rmobile"><br><br>
+    <button (click)="register()">Register</button>
+    
+</div>
+
+
+<div *ngIf="login==1">
+    <app-dashboard></app-dashboard>
+</div>
